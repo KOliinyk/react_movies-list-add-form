@@ -59,7 +59,12 @@ export const NewMovie: React.FC<NewMovieProps> = ({ onAddMovie }) => {
       description: description.trim(),
     });
 
-    // Очистити форму + errors, оновити ключ
+    // ✅ Повне скидання форми
+    setTitle('');
+    setImgUrl('');
+    setImdbUrl('');
+    setDescription('');
+    setErrors({});
     setFormKey(uuidv4());
   };
 
